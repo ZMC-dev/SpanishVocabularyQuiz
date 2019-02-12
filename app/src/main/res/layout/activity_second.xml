@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Questions"
+            android:textColor="#102027"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/QuestionHeading"
+                android:text="Click the best translations of INTELIGENTE " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="Only 2 choices are correct"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/question1_option1"
+                style="@style/CheckBox"
+                android:text="Smart" />
+
+            <CheckBox
+                android:id="@+id/question1_option2"
+                style="@style/CheckBox"
+                android:text="Clever" />
+
+            <CheckBox
+                android:id="@+id/question1_option3"
+                style="@style/CheckBox"
+                android:text="Difficult" />
+
+            <CheckBox
+                android:id="@+id/question1_option4"
+                style="@style/CheckBox"
+                android:text="Amazing" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/QuestionHeading"
+                android:text="Choose the best translations of BELLA " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="Only 2 choices are correct"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/question2_option1"
+                style="@style/CheckBox"
+                android:text="Rich" />
+
+            <CheckBox
+                android:id="@+id/question2_option2"
+                style="@style/CheckBox"
+                android:text="Pretty" />
+
+            <CheckBox
+                android:id="@+id/question2_option3"
+                style="@style/CheckBox"
+                android:text="Big" />
+
+            <CheckBox
+                android:id="@+id/question2_option4"
+                style="@style/CheckBox"
+                android:text="Beautiful" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/QuestionHeading"
+                android:text=" How do you translate from Spanish to English: «Dinero »? " />
+
+            <EditText
+                android:id="@+id/question3_answer"
+                style="@style/AnswerField"
+                android:hint="Write your answer" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/QuestionHeading"
+                android:text="How do you translate from English to Spanish: «Entrevista»? " />
+
+            <EditText
+                android:id="@+id/question4_answer"
+                style="@style/AnswerField"
+                android:hint="Write your answer " />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/QuestionHeading"
+                android:text="The next phrase « Hola! ¿cómo estás? » means « Hello, where are you?" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/question5_yes"
+                    style="@style/RadioButtonChoice"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/question5_no"
+                    style="@style/RadioButtonChoice"
+                    android:text="No" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/QuestionHeading"
+                android:text="the next phrase « Me gusta la playa » means « I love the beach » " />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/question6_yes"
+                    style="@style/RadioButtonChoice"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/question6_no"
+                    style="@style/RadioButtonChoice"
+                    android:text="No" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submitAnswers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Submit Answers" />
+
+    </LinearLayout>
+
+</ScrollView>
