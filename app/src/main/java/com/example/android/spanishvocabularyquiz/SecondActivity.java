@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 
@@ -12,14 +14,14 @@ public class SecondActivity extends AppCompatActivity {
 
     CheckBox question1_option1, question1_option2, question1_option3, question1_option4, question2_option1, question2_option2, question2_option3, question2_option4;
     Button btn_submitAnswers;
+    EditText question3_answer, question4_answer;
+    RadioButton question5_yes, question5_no, question6_yes, question6_no;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-
-        // instances for all checkboxes + button
         //Question 1
         question1_option1 = (CheckBox) findViewById(R.id.question1_option1);
         question1_option2 = (CheckBox) findViewById(R.id.question1_option2);
@@ -32,17 +34,21 @@ public class SecondActivity extends AppCompatActivity {
         question2_option3 = (CheckBox) findViewById(R.id.question2_option3);
         question2_option4 = (CheckBox) findViewById(R.id.question2_option4);
 
+        question3_answer = (EditText) findViewById(R.id.question3_answer);
+
+        question4_answer = (EditText) findViewById(R.id.question4_answer);
 
         btn_submitAnswers = (Button) findViewById(R.id.btn_submitAnswers);
         btn_submitAnswers.setOnClickListener(new View.OnClickListener() {
+
 
             @Override
             public void onClick(View v) {
                 String summaryAnswers = "Answer Summary";
 
-              // Ce code pour le button marche puisque il affiche un récap des réponses mais il n'est pas encore lié au counter, je voudrais afficher le score
-
-                // question n°1
+                /**
+                 * Question 1 : this text is added to the Answer Summary
+                 */
 
                 if (question1_option1.isChecked()) {
                     summaryAnswers += "\nSmart : Yes! ";
@@ -57,7 +63,9 @@ public class SecondActivity extends AppCompatActivity {
                     summaryAnswers += "\nDifficult : Wrong Answer";
                 }
 
-                // question n°2
+                /**
+                 * Question 2 : this text is added to the Answer Summary
+                 */
 
                 if (question2_option1.isChecked()) {
                     summaryAnswers += "\nRich: Wrong Answer!";
@@ -72,62 +80,69 @@ public class SecondActivity extends AppCompatActivity {
                     summaryAnswers += "\nBeautiful: Yes!";
                 }
 
+                /**
+                 * Question 3 : this text is added to the Answer Summary
+                 */
+
+
                 Toast.makeText(getApplicationContext(), summaryAnswers, Toast.LENGTH_SHORT).show();
             }
         });
+        }
+
+     /**
+      * When I check a checkbox
+      * */
+
+     public void onCheckboxClicked(View view) {
+        boolean checked = ((CheckBox) view).isChecked();
     }
 
-/*
-    // JE VOUDRAIS AFFICHER UN TOAST QUAND LA REPONSE POUR CHAQUE CASE SELECTED/DESELECTED MAIS PAS PRIORITAIRE
 
-    public void onCheckboxClicked(View view) {
-        boolean checked = ((CheckBox) view).isChecked();
-        String str = "";
 
-        switch (view.getId()) {
-            case R.id.question1_option1:
-                str = checked ? "Nice" : "Oh! try again!";
-                break;
-            case R.id.question1_option2:
-                str = checked ? "Good Job" : "Oh! try again";
-                break;
-            case R.id.question1_option3:
-                str = checked ? "Are you sure?" : "Keep trying!";
-                break;
-            case R.id.question1_option4:
-                str = checked ? "I don't think so" : "Keep working!";
-                break;
+    public int calculateCheckBoxAnswers() {
+
+        /** Calculates the number of good answer
+         */
+        int score = 0;
+
+        if (question1_option1.isChecked() && question1_option2.isChecked() &&
+                !question1_option3.isChecked() && !question1_option4.isChecked()) {
+            score++;
         }
-        Toast.makeText(SecondActivity.this,
-                "Your Message", Toast.LENGTH_LONG).show();
-    }*/
 
-
-    // il faut que je fasse une méthode pour le counter aussi ? ce code devrais rajouter des points si les réponses sont bonnes
-
-    int counter = 0;
-    int score = 0;
-
-    public void calculateCheckBoxAnswers(View view) {
-        if (counter == 1) {
-
-            // bonnes réponses pour la question 1 : 1 et 2
-            question1_option1.setEnabled(false);
-            question1_option2.setEnabled(false);
-            question1_option3.setEnabled(false);
-            question1_option4.setEnabled(false);
-
-            // bonnes réponses pour la question 2 : 2 et 4
-            question2_option1.setEnabled(false);
-            question2_option2.setEnabled(false);
-            question2_option3.setEnabled(false);
-            question2_option4.setEnabled(false);
+        if (!question2_option1.isChecked() && question2_option2.isChecked() &&
+                !question2_option3.isChecked() && question1_option4.isChecked()) {
+            score++;
         }
-        counter++;
-        if (question1_option1.isChecked() && !question1_option2.isChecked() &&
-                question2_option2.isChecked() && !question2_option4.isChecked())
+        if (question3_answer.getText().equals("Money")) {
+            score++;
+        }
+
+        if (question4_answer.getText().equals("Interview")) {
+            score++;
+        }
+        if (!question5_yes.isChecked() && question5_no.isChecked()) {
+            score++;
+        }
+        if (question6_yes.isChecked() && !question6_no.isChecked()) {
             score++;
 
+        }
+        return score;
+    }
+    /**
+     * Create an answer summary.
+     *
+     * @param score of the good answers
+     * @return answer summary
+     *
+     */
+
+    private String createAnswerSummary(int score) {
+        String answerMessage = "You have " + score + "good answers";
+        answerMessage += "\nBuen trabajo! Keep Working!";
+        return answerMessage;
     }
 
 }
