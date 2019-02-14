@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -40,22 +40,22 @@
                 android:textSize="12sp" />
 
             <CheckBox
-                android:id="@+id/question1_option1"
+                android:id="@+id/Q1_option1"
                 style="@style/CheckBox"
                 android:text="Smart" />
 
             <CheckBox
-                android:id="@+id/question1_option2"
+                android:id="@+id/Q1_option2"
                 style="@style/CheckBox"
                 android:text="Clever" />
 
             <CheckBox
-                android:id="@+id/question1_option3"
+                android:id="@+id/Q1_option3"
                 style="@style/CheckBox"
                 android:text="Difficult" />
 
             <CheckBox
-                android:id="@+id/question1_option4"
+                android:id="@+id/Q1_option4"
                 style="@style/CheckBox"
                 android:text="Amazing" />
 
@@ -79,22 +79,22 @@
                 android:textSize="12sp" />
 
             <CheckBox
-                android:id="@+id/question2_option1"
+                android:id="@+id/Q2_option1"
                 style="@style/CheckBox"
                 android:text="Rich" />
 
             <CheckBox
-                android:id="@+id/question2_option2"
+                android:id="@+id/Q2_option2"
                 style="@style/CheckBox"
                 android:text="Pretty" />
 
             <CheckBox
-                android:id="@+id/question2_option3"
+                android:id="@+id/Q2_option3"
                 style="@style/CheckBox"
                 android:text="Big" />
 
             <CheckBox
-                android:id="@+id/question2_option4"
+                android:id="@+id/Q2_option4"
                 style="@style/CheckBox"
                 android:text="Beautiful" />
 
@@ -111,7 +111,7 @@
                 android:text=" How do you translate from Spanish to English: «Dinero »? " />
 
             <EditText
-                android:id="@+id/question3_answer"
+                android:id="@+id/Q3_answer"
                 style="@style/AnswerField"
                 android:hint="Write your answer" />
 
@@ -128,7 +128,7 @@
                 android:text="How do you translate from English to Spanish: «Entrevista»? " />
 
             <EditText
-                android:id="@+id/question4_answer"
+                android:id="@+id/Q4_answer"
                 style="@style/AnswerField"
                 android:hint="Write your answer " />
 
@@ -150,12 +150,12 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/question5_yes"
+                    android:id="@+id/Q5_optionYes"
                     style="@style/RadioButtonChoice"
                     android:text="Yes" />
 
                 <RadioButton
-                    android:id="@+id/question5_no"
+                    android:id="@+id/Q5_optionNo"
                     style="@style/RadioButtonChoice"
                     android:text="No" />
 
@@ -179,12 +179,12 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/question6_yes"
+                    android:id="@+id/Q6_optionYes"
                     style="@style/RadioButtonChoice"
                     android:text="Yes" />
 
                 <RadioButton
-                    android:id="@+id/question6_no"
+                    android:id="@+id/Q6_optionNo"
                     style="@style/RadioButtonChoice"
                     android:text="No" />
 
@@ -197,7 +197,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:onClick="submitAnswers"
             android:text="Submit Answers" />
+
+
+
+        <TextView
+            android:id="@+id/answer_summary_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answers Summary: "
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: "
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/score_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
