@@ -3,25 +3,30 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
     tools:context=".SecondActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:context=".SecondActivity">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:focusable="true"
-            android:fontFamily="sans-serif-smallcaps"
+            android:fontFamily="sans-serif-condensed"
             android:text="@string/questions_title"
-            android:textColor="#102027"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textAlignment="center"
+            android:background="#790e8b"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:focusableInTouchMode="true"
+            android:textSize="20sp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -30,35 +35,31 @@
 
             <TextView
                 style="@style/QuestionHeading"
-                android:text="Click the best translations of INTELIGENTE " />
+                android:text="@string/question1_inteligente" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginBottom="8dp"
-                android:text="Only 2 choices are correct"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/onechoice_q1"
                 android:textSize="12sp" />
 
             <CheckBox
                 android:id="@+id/Q1_option1"
                 style="@style/CheckBox"
-                android:text="Smart" />
+                android:text="@string/Q1_option1" />
 
             <CheckBox
                 android:id="@+id/Q1_option2"
                 style="@style/CheckBox"
-                android:text="Clever" />
+                android:text="@string/Q1_option2" />
 
             <CheckBox
                 android:id="@+id/Q1_option3"
                 style="@style/CheckBox"
-                android:text="Difficult" />
-
-            <CheckBox
-                android:id="@+id/Q1_option4"
-                style="@style/CheckBox"
-                android:text="Amazing" />
+                android:text="@string/Q1_option3" />
 
         </LinearLayout>
 
@@ -69,14 +70,15 @@
 
             <TextView
                 style="@style/QuestionHeading"
-                android:text="Choose the best translations of BELLA " />
+                android:text="@string/Question2_bella" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginBottom="8dp"
-                android:text="Only 2 choices are correct"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/onlychoice_Q2"
                 android:textSize="12sp" />
 
             <CheckBox
@@ -94,11 +96,6 @@
                 style="@style/CheckBox"
                 android:text="Big" />
 
-            <CheckBox
-                android:id="@+id/Q2_option4"
-                style="@style/CheckBox"
-                android:text="Beautiful" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -109,12 +106,12 @@
 
             <TextView
                 style="@style/QuestionHeading"
-                android:text=" How do you translate from Spanish to English: «Dinero »? " />
+                android:text="@string/Question3_dinero" />
 
             <EditText
                 android:id="@+id/Q3_answer"
                 style="@style/AnswerField"
-                android:hint="Write your answer" />
+                android:hint="@string/Q3_hint" />
 
         </LinearLayout>
 
@@ -123,15 +120,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <TextView
                 style="@style/QuestionHeading"
-                android:text="How do you translate from English to Spanish: «Entrevista»? " />
+                android:text="@string/Question4_entrevista" />
 
             <EditText
                 android:id="@+id/Q4_answer"
                 style="@style/AnswerField"
-                android:hint="Write your answer " />
+                android:hint="@string/Q4_hint" />
 
         </LinearLayout>
 
@@ -142,7 +138,7 @@
 
             <TextView
                 style="@style/QuestionHeading"
-                android:text="The next phrase « Hola! ¿cómo estás? » means « Hello, where are you?" />
+                android:text="@string/Question5" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -158,12 +154,12 @@
                     <RadioButton
                         android:id="@+id/Q5_optionYes"
                         style="@style/RadioButtonChoice"
-                        android:text="Yes" />
+                        android:text="@string/Q5_yes" />
 
                     <RadioButton
                         android:id="@+id/Q5_optionNo"
                         style="@style/RadioButtonChoice"
-                        android:text="No" />
+                        android:text="@string/Q5_no" />
 
                 </RadioGroup>
 
@@ -178,7 +174,7 @@
 
             <TextView
                 style="@style/QuestionHeading"
-                android:text="the next phrase « Me gusta la playa » means « I love the beach » " />
+                android:text="@string/Question6" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -194,12 +190,12 @@
                     <RadioButton
                         android:id="@+id/Q6_optionYes"
                         style="@style/RadioButtonChoice"
-                        android:text="Yes" />
+                        android:text="@string/Q6_yes" />
 
                     <RadioButton
                         android:id="@+id/Q6_optionNo"
                         style="@style/RadioButtonChoice"
-                        android:text="No" />
+                        android:text="@string/Q6_no" />
 
                 </RadioGroup>
 
@@ -212,7 +208,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Submit Answers" />
+            android:background="#790e8b"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="15dp"
+            android:text="@string/submit_answers" />
 
 
         <TextView
@@ -220,7 +220,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#4f5b62"
+            android:textSize="15sp"
+            android:padding="10dp"
             android:text = ""/>
 
         <TextView
@@ -228,7 +231,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:textSize="40sp"
+            android:textColor="#790e8b"
+            android:layout_marginTop="20dp"
             android:text=""/>
 
         <Button
@@ -236,8 +241,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:text="Reset Quiz" />
+            android:layout_marginTop="20dp"
+            android:background="#48a999"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:text="@string/reset_quiz" />
 
     </LinearLayout>
 

@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">Spanish Vocabulary Quiz</string>
-    <string name="questions_title">Questions</string>
+    <string name="questions_title">QUESTIONS</string>
+    <string name="spanish_vocabulary_quiz">SPANISH VOCABULARY QUIZ</string>
+    <string name="start_the_quiz_button">Start the Quiz</string>
+    <string name="question1_inteligente">1. Click the best translation of "INTELIGENTE" </string>
+    <string name="onechoice_q1">Only 1 choice is correct</string>
+    <string name="Q1_option1">Smart</string>
+    <string name="Q1_option2">Difficult</string>
+    <string name="Q1_option3">Amazing</string>
+    <string name="onlychoice_Q2">Only 1 choice is correct</string>
+    <string name="Question2_bella">2. Choose the best translation of "BELLA" </string>
+    <string name="Question4_entrevista">4. How do you translate from English to Spanish: «Entrevista»?</string>
+    <string name="Question3_dinero">3. How do you translate from Spanish to English: «Dinero »?</string>
+    <string name="Q3_hint">Write your answer</string>
+    <string name="Q4_hint">Write your answer</string>
+    <string name="Question5">5. The next phrase « Hola! ¿cómo estás? » means « Hello! where are you?</string>
+    <string name="Question6">6. the next phrase « Me gusta la playa » means « I like the beach »</string>
+    <string name="reset_quiz">Reset Quiz</string>
+    <string name="submit_answers">Submit Answers</string>
+    <string name="Q6_yes">Yes</string>
+    <string name="Q6_no">No</string>
+    <string name="Q5_yes">Yes</string>
+    <string name="Q5_no">No</string>
 </resources>

@@ -5,20 +5,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:layout_marginTop="30dp"
-        android:textColor="#d32f2f"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Spanish Vocabulary Quiz" />
+        android:padding="5dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#790e8b"
+        android:text="@string/spanish_vocabulary_quiz" />
 
     <ImageView
-        android:src="@drawable/spanish2"
+        android:src="@drawable/spanish1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -28,8 +30,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:padding="10dp"
-        android:background="#fdd835"
-        android:text="Start the Quiz" />
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="15dp"
+        android:textColor="#ffffff"
+        android:background="#790e8b"
+        android:text="@string/start_the_quiz_button" />
 
 </RelativeLayout>

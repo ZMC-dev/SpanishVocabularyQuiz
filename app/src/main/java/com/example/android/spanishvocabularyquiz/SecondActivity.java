@@ -1,5 +1,6 @@
 package com.example.android.spanishvocabularyquiz;
 
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 public class SecondActivity extends AppCompatActivity {
 
 
-    CheckBox Q1_option1, Q1_option2, Q1_option3, Q1_option4, Q2_option1, Q2_option2, Q2_option3, Q2_option4;
+    CheckBox Q1_option1, Q1_option2, Q1_option3, Q2_option1, Q2_option2, Q2_option3;
     RadioButton Q5_optionYes, Q5_optionNo, Q6_optionYes, Q6_optionNo;
     Button btn_submitAnswers;
 
@@ -23,6 +24,7 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
 
         btn_submitAnswers = findViewById(R.id.btn_submitAnswers);
 
@@ -39,14 +41,12 @@ public class SecondActivity extends AppCompatActivity {
                 CheckBox Q1_option1 = (CheckBox) findViewById(R.id.Q1_option1);
                 CheckBox Q1_option2 = (CheckBox) findViewById(R.id.Q1_option2);
                 CheckBox Q1_option3 = (CheckBox) findViewById(R.id.Q1_option3);
-                CheckBox Q1_option4 = (CheckBox) findViewById(R.id.Q1_option4);
 
 
                 // Question N°2 - CheckBox
                 CheckBox Q2_option1 = (CheckBox) findViewById(R.id.Q2_option1);
                 CheckBox Q2_option2 = (CheckBox) findViewById(R.id.Q2_option2);
                 CheckBox Q2_option3 = (CheckBox) findViewById(R.id.Q2_option3);
-                CheckBox Q2_option4 = (CheckBox) findViewById(R.id.Q2_option4);
 
 
                 // Question N°3 - EditText
@@ -68,37 +68,37 @@ public class SecondActivity extends AppCompatActivity {
                 int score = 0;
                 String summary = ("Your Good Answers Summary : ");
 
-                if (Q1_option1.isChecked() && Q1_option2.isChecked() &&
-                        !Q1_option3.isChecked() && !Q1_option4.isChecked()) {
-                    summary += ("\nThe right answers are Option 1 & Option 2");
+                if (Q1_option1.isChecked() && !Q1_option2.isChecked() &&
+                        !Q1_option3.isChecked()) {
+                    summary += ("\nQuestion 1- The right answers is Option 1: Smart");
                     score += +1;
 
                 }
 
                 if (!Q2_option1.isChecked() && Q2_option2.isChecked() &&
-                        !Q2_option3.isChecked() && Q2_option4.isChecked()) {
-                    summary += ("\nThe right answers are Option 2 & Option 4");
+                        !Q2_option3.isChecked()) {
+                    summary += ("\nQuestion 2 - The right answers is Option 2: Pretty");
                     score += +1;
                 }
 
                 if (Q3_answer.equals("money")) {
-                    summary += ("\nThe right answer is MONEY");
+                    summary += ("\nQuestion 3 - The right answer is MONEY");
                     score += 1;
                 }
 
                 if (Q4_answer.equals("interview")) {
-                    summary += ("\nThe right answer is INTERVIEW");
+                    summary += ("\nQuestion 4 - The right answer is INTERVIEW");
                     score += 1;
                 }
 
                 if (!Q5_optionYes.isChecked() && Q5_optionNo.isChecked()) {
-                    summary += ("\nQuestion 5 = right answer: NO");
+                    summary += ("\nQuestion 5 = The right answer is NO");
                     score += +1;
 
                 }
 
                 if (Q6_optionYes.isChecked() && !Q6_optionNo.isChecked()) {
-                    summary += ("\nQuestion 5 = right answer: YES");
+                    summary += ("\nQuestion 5 - The right answer is YES");
                     score += +1;
                 }
 
