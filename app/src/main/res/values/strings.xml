@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Spanish Vocabulary Quiz</string>
+    <string name="questions_title">Questions</string>
 </resources>

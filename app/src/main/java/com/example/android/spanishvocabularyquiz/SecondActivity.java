@@ -2,15 +2,13 @@ package com.example.android.spanishvocabularyquiz;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 
 public class SecondActivity extends AppCompatActivity {
@@ -33,7 +31,6 @@ public class SecondActivity extends AppCompatActivity {
 
             /**
              * This method is called when the Submit Answer button is clicked.
-             *
              */
             public void onClick(View view) {
 
@@ -63,8 +60,7 @@ public class SecondActivity extends AppCompatActivity {
                 RadioButton Q5_optionYes = findViewById(R.id.Q5_optionYes);
                 RadioButton Q5_optionNo = findViewById(R.id.Q5_optionNo);
 
-                // Question N°5 - RadioButtons
-
+                // Question N°6 - RadioButtons
                 RadioButton Q6_optionYes = findViewById(R.id.Q6_optionYes);
                 RadioButton Q6_optionNo = findViewById(R.id.Q6_optionNo);
 
@@ -106,9 +102,8 @@ public class SecondActivity extends AppCompatActivity {
                     score += +1;
                 }
 
-                summary += "\nYour final score is " + score;
                 displaySummary(summary);
-
+                displayScore(score);
             }
 
         });
@@ -116,9 +111,14 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void displaySummary (String summary) {
-
         TextView summaryTextView = (TextView) findViewById(R.id.summary_tex_view);
-        summaryTextView.setText(summary);
+        summaryTextView.setText(String.valueOf(summary));
+    }
+
+
+    public void displayScore (int score) {
+        TextView scoreTextView = (TextView) findViewById(R.id.score_text_view);
+        scoreTextView.setText(String.valueOf(score));
     }
 
 }

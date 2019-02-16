@@ -18,7 +18,7 @@
             android:layout_gravity="center"
             android:focusable="true"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="Questions"
+            android:text="@string/questions_title"
             android:textColor="#102027"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -223,6 +223,14 @@
             android:padding="20dp"
             android:text = ""/>
 
+        <TextView
+            android:id="@+id/score_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text=""/>
+
         <Button
             android:id="@+id/btn_reset"
             android:layout_width="wrap_content"
@@ -230,7 +238,6 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:text="Reset Quiz" />
-
 
     </LinearLayout>
 
