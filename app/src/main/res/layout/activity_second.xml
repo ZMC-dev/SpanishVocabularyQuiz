@@ -24,14 +24,14 @@
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:padding="10dp"
-            android:layout_marginBottom="10dp"
             android:focusableInTouchMode="true"
             android:textSize="20sp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
             <TextView
                 style="@style/QuestionHeading"
@@ -66,7 +66,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
             <TextView
                 style="@style/QuestionHeading"
@@ -101,7 +102,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
 
             <TextView
@@ -118,7 +120,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
             <TextView
                 style="@style/QuestionHeading"
@@ -134,7 +137,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
             <TextView
                 style="@style/QuestionHeading"
@@ -143,8 +147,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:orientation="horizontal">
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
 
                 <RadioGroup
                     android:id="@+id/radioGroup_Q5"
@@ -170,6 +174,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -212,7 +217,7 @@
             android:textSize="15sp"
             android:padding="10dp"
             android:textColor="#ffffff"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:text="@string/submit_answers" />
 
         <TextView
@@ -222,8 +227,8 @@
             android:layout_gravity="center"
             android:fontFamily="sans-serif-condensed"
             android:textColor="#4f5b62"
-            android:textSize="15sp"
-            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
             android:text = ""/>
 
         <TextView
@@ -233,7 +238,7 @@
             android:layout_gravity="center"
             android:textSize="40sp"
             android:textColor="#790e8b"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text=""/>
 
     </LinearLayout>

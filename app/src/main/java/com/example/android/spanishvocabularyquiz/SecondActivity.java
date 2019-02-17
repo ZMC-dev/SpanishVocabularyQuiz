@@ -27,6 +27,9 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
 
+        /**
+         * This button is where the user clicks when he wants submit all his answers.
+         */
         btn_submitAnswers = findViewById(R.id.btn_submitAnswers);
 
         btn_submitAnswers.setOnClickListener(new View.OnClickListener() {
@@ -38,48 +41,67 @@ public class SecondActivity extends AppCompatActivity {
              */
             public void onClick(View view) {
 
-                // Question N°1 - CheckBox : the right answer is option 1 : "smart"
+                /**
+                 * Question N°1  has 3 options (CheckBox) with one right answer (option 1 : "smart").
+                  */
                 CheckBox Q1_option1 = (CheckBox) findViewById(R.id.Q1_option1);
                 CheckBox Q1_option2 = (CheckBox) findViewById(R.id.Q1_option2);
                 CheckBox Q1_option3 = (CheckBox) findViewById(R.id.Q1_option3);
 
 
-                // Question N°2 - CheckBox : the right answer is option 2 : "pretty"
+                /**
+                 * Question N°2  has 3 options (CheckBox) with one right answer (option 2 : "pretty").
+                 */
                 CheckBox Q2_option1 = (CheckBox) findViewById(R.id.Q2_option1);
                 CheckBox Q2_option2 = (CheckBox) findViewById(R.id.Q2_option2);
                 CheckBox Q2_option3 = (CheckBox) findViewById(R.id.Q2_option3);
 
 
+                /**
+                 * Question N°3  is a response to write (EditText) with one right answer ("money").
+                 */
                 // Question N°3 - EditText : the right answer is "money"
-                str_money ="money";
+                str_money = "money";
                 EditText Q3_answer = (EditText) findViewById(R.id.Q3_answer);
                 str_money = Q3_answer.getText().toString();
 
 
-                // Question N°4 - EditText : the right answer is "interview"
-                str_interview="interview";
+                /**
+                 * Question N°4  is a response to write (EditText) with one right answer ("interview").
+                 */
+                str_interview = "interview";
                 EditText Q4_answer = (EditText) findViewById(R.id.Q4_answer);
                 str_interview = Q4_answer.getText().toString();
 
 
-                // Question N°5 - RadioButtons : the right answer is NO
+                /**
+                 * Question N°5  with 2 choices yes or no (RadioButton) with one right answer (option NO).
+                 */
                 RadioButton Q5_optionYes = findViewById(R.id.Q5_optionYes);
                 RadioButton Q5_optionNo = findViewById(R.id.Q5_optionNo);
 
-                // Question N°6 - RadioButtons : the right answer is YES
+                /**
+                 * Question N°6  with 2 choices yes or no (RadioButton) with one right answer (option YES).
+                 */
                 RadioButton Q6_optionYes = findViewById(R.id.Q6_optionYes);
                 RadioButton Q6_optionNo = findViewById(R.id.Q6_optionNo);
 
 
+                /**
+                 * Score is a notation of good answers, The best score is 6, 1 point for each good answer, the quiz has 6 questions.
+                 */
                 int score = 0;
+
+                /**
+                 * Summary is a detail of good answers, if the answer is wrong, the answer doesn't appear in this summary but a toast with a message to try it again.
+                 */
                 String summary = ("Your Good Answers: ");
 
                 if (Q1_option1.isChecked() && !Q1_option2.isChecked() &&
                         !Q1_option3.isChecked()) {
                     summary += ("\nQuestion 1- The right answers is Option 1: Smart");
                     score += +1;
-                }
-                else {
+                } else {
                     Toast.makeText(getApplicationContext(), "Question 1: Try it again!", Toast.LENGTH_LONG).show();
                 }
 
@@ -87,16 +109,14 @@ public class SecondActivity extends AppCompatActivity {
                         !Q2_option3.isChecked()) {
                     summary += ("\nQuestion 2 - The right answers is Option 2: Pretty");
                     score += +1;
-                }
-                else {
+                } else {
                     Toast.makeText(getApplicationContext(), "Question 2: Try it again!", Toast.LENGTH_LONG).show();
                 }
 
                 if (str_money.equals("money") || str_money.equals("MONEY") || str_money.equals("Money")) {
                     summary += ("\nQuestion 3 - The right answer is MONEY");
                     score += 1;
-                }
-                else {
+                } else {
                     Toast.makeText(getApplicationContext(), "Question 3: Try it again!", Toast.LENGTH_LONG).show();
                 }
 
@@ -104,8 +124,7 @@ public class SecondActivity extends AppCompatActivity {
                 if (str_interview.equals("interview") || str_interview.equals("INTERVIEW") || str_interview.equals("Interview")) {
                     summary += ("\nQuestion 4 - The right answer is INTERVIEW");
                     score += 1;
-                }
-                else {
+                } else {
                     Toast.makeText(getApplicationContext(), "Question 4: Try it again!", Toast.LENGTH_LONG).show();
                 }
 
@@ -113,8 +132,7 @@ public class SecondActivity extends AppCompatActivity {
                 if (!Q5_optionYes.isChecked() && Q5_optionNo.isChecked()) {
                     summary += ("\nQuestion 5 = The right answer is NO");
                     score += +1;
-                }
-                else {
+                } else {
                     Toast.makeText(getApplicationContext(), "Question 5: Try it again!", Toast.LENGTH_LONG).show();
                 }
 
@@ -122,10 +140,10 @@ public class SecondActivity extends AppCompatActivity {
                 if (Q6_optionYes.isChecked() && !Q6_optionNo.isChecked()) {
                     summary += ("\nQuestion 6 - The right answer is YES");
                     score += +1;
-                }
-                else {
+                } else {
                     Toast.makeText(getApplicationContext(), "Question 6: Try it again!", Toast.LENGTH_LONG).show();
                 }
+
 
                 displaySummary(summary);
                 displayScore(score);
@@ -140,7 +158,7 @@ public class SecondActivity extends AppCompatActivity {
      * @param summary of good answers
      */
 
-    private void displaySummary (String summary) {
+    private void displaySummary(String summary) {
         TextView summaryTextView = (TextView) findViewById(R.id.summary_tex_view);
         summaryTextView.setText(String.valueOf(summary));
     }
@@ -150,7 +168,7 @@ public class SecondActivity extends AppCompatActivity {
      * @param score of good answers
      */
 
-    public void displayScore (int score) {
+    public void displayScore(int score) {
         TextView scoreTextView = (TextView) findViewById(R.id.score_text_view);
         scoreTextView.setText(String.valueOf(score));
     }

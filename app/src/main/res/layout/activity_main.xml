@@ -9,45 +9,42 @@
     tools:context=".MainActivity">
 
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="160dp"
-        android:layout_marginTop="20dp"
-        android:padding="5dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="sans-serif-condensed"
         android:textColor="#790e8b"
-        android:text="SPANISH VOCABULARY QUIZ" />
+        android:text="@string/spanish_vocabulary_quiz_title" />
 
 
     <ImageView
         android:id="@+id/spanish1_image"
         android:src="@drawable/spanish1"
         android:layout_width="match_parent"
-        android:layout_height="450dp" />
+        android:layout_height="match_parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"
+        android:textSize="22sp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="100dp"
         android:padding="5dp"
         android:fontFamily="sans-serif-condensed"
         android:textColor="#4f5b62"
-        android:text="Looking forward learning Spanish ?" />
+        android:text="@string/looking_forward_learning_spanish" />
 
     <Button
         android:id="@+id/start_quiz_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:layout_centerHorizontal="true"
         android:textSize="20sp"
         android:fontFamily="sans-serif-condensed"
