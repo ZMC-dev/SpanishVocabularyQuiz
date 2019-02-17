@@ -209,11 +209,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#790e8b"
+            android:textSize="15sp"
             android:padding="10dp"
             android:textColor="#ffffff"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             android:text="@string/submit_answers" />
-
 
         <TextView
             android:id="@+id/summary_tex_view"
@@ -235,17 +235,6 @@
             android:textColor="#790e8b"
             android:layout_marginTop="20dp"
             android:text=""/>
-
-        <Button
-            android:id="@+id/btn_reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="#48a999"
-            android:padding="10dp"
-            android:textColor="#ffffff"
-            android:text="@string/reset_quiz" />
 
     </LinearLayout>
 
